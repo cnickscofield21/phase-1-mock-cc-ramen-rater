@@ -15,6 +15,9 @@ function renderAllRamens(ramens) {
 
         dispArea.append(img);
     });
+
+    
+    renderRamen(ramens[0]);
 }
 
 function renderRamen(ramen) {

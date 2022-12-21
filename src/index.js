@@ -16,7 +16,7 @@ function renderAllRamens(ramens) {
         dispArea.append(img);
     });
 
-    
+    // Display first ramen in file on first run.
     renderRamen(ramens[0]);
 }
 

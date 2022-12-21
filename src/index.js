@@ -21,7 +21,7 @@ function renderAllRamens(ramens) {
 }
 
 function renderRamen(ramen) {
-    // Img needs a bit more effort to setup
+    // Img needs a bit more effort to setup, hence variable assignment
     const img = document.querySelector("#ramen-detail img");
     img.src = ramen.image;
     img.alt = ramen.name;
@@ -80,7 +80,6 @@ function setComingSoon(e) {
 function getJSON(url = "", callback) {
     fetch(url)
     .then((response) => response.json())
-    //.then((data) => callback(data))
     .then((data) => callback(data))
 }
 
@@ -94,7 +93,7 @@ function postJSON(url = "", data = {}, callback) {
         },
         body: JSON.stringify(data)
     })
-    .then((response) => console.log(response))
+    .then((response) => callback(response))
 }
 
 
